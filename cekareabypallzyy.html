@@ -2,6 +2,7 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cek Area By Pallzyy</title>
 <style>
     body {
@@ -47,9 +48,13 @@
         color: #888;
         font-size: 18px;
     }
+    .table-responsive {
+        overflow-x: auto;
+    }
     table {
         width: 100%;
         border-collapse: collapse;
+        min-width: 600px; /* biar tabel bisa discroll di layar kecil */
     }
     thead {
         background-color: #198754;
@@ -62,6 +67,20 @@
     }
     tr:nth-child(even) {
         background-color: #f2f2f2;
+    }
+    /* Responsive untuk layar kecil */
+    @media (max-width: 600px) {
+        header {
+            font-size: 18px;
+            padding: 10px;
+        }
+        .container {
+            padding: 10px;
+        }
+        th, td {
+            font-size: 14px;
+            padding: 6px;
+        }
     }
 </style>
 <script>
